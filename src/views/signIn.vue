@@ -54,7 +54,7 @@
             Sing In
           </v-btn>
           <div class="signUp-page">
-            <span class="caption white--text">Don't have an account? <a class="red--text" href="/signUp"  router  to="/signUp">Sign Up</a> </span>
+            <span class="caption white--text">Don't have an account? <v-btn class="red--text" icon  router  to="/signUp">Sign Up</v-btn> </span>
             <span class="caption white--text">Forgot Password? </span>
           </div>
         </div>
