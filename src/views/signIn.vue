@@ -48,6 +48,8 @@
           <v-btn block
               class="red white--text mr-4 mt-3"
               @click="reset"
+                 router
+                 to="/signUp"
           >
             Sing In
           </v-btn>
