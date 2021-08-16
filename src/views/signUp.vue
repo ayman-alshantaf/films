@@ -10,9 +10,8 @@
           <v-spacer class="d-flex d-lg-none"></v-spacer>
           <!--the brand-->
           <v-toolbar-title class="text-uppercase white--text">
-            <a href="/" style="text-decoration: none; color: white" router to="/">aflamy</a></v-toolbar-title>
+            <a href="/" style="text-decoration: none; color: white" router to="/"><v-icon class=" white--text mr-2" style="font-size: 26px">mdi-play-network-outline</v-icon>aflamy</a></v-toolbar-title>
           <!--spacing-->
-          <v-spacer></v-spacer>
           <!--singUp-->
         </v-app-bar>
         <!--  Navigation Drawer-->

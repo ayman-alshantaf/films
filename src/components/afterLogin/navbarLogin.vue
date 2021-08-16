@@ -6,7 +6,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer" class="white--text 	d-flex d-lg-none"></v-app-bar-nav-icon>
       <v-spacer class="d-flex d-lg-none"></v-spacer>
       <!--the brand-->
-      <v-toolbar-title class="text-uppercase white--text">aflamy</v-toolbar-title>
+      <v-toolbar-title class="text-uppercase white--text"><v-icon class=" white--text mr-2" style="font-size: 26px">mdi-play-network-outline</v-icon>aflamy</v-toolbar-title>
       <v-spacer class="d-none d-lg-flex"></v-spacer>
       <!--      link navbar lg screen-->
       <div class="d-none d-lg-flex">
@@ -37,7 +37,7 @@
       <!--brand website-->
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="text-uppercase  text-lg-center text-h4 my-4">Aflamy</v-list-item-title>
+          <v-list-item-title class="text-uppercase  text-lg-center text-h4 my-4"><v-icon class=" white--text mr-2" style="font-size: 26px">mdi-play-network-outline</v-icon>Aflamy</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <!--dividing line -->

@@ -23,6 +23,10 @@
                   <span><span class="dots">.</span>Adventure </span>
                   <span><span class="dots">.</span>Horror </span>
                 </div>
+                <div class="watch-video">
+                  <span><v-icon>mdi-play-circle</v-icon>watch Now</span>
+                  <span><v-icon>mdi-plus-circle</v-icon>My List</span>
+                </div>
                 <div class="paragraph">
                   <p>In a small town in Maine, seven children known as The Losers Club come face to face with life
                     problems, bullies and a monster that takes the shape of a clown called Pennywise.</p>
@@ -36,22 +40,7 @@
                   <h3 v-if="login">asddddd</h3>
                 </div>
               </div>
-              <hr>
-              <!--icon watch and download-->
-              <div class="watch-download">
-                <span class="caption" style="">
-                  <v-icon class="red--text mr-2" >mdi-play-circle</v-icon>
-                  Watch now
-                </span>
-                <span class="caption">
-                  <v-icon class="grey--text lighten-1 mr-2">mdi-plus-circle</v-icon>
-                  My List
-                </span>
-                <span class="caption">
-                  <v-icon class="grey--text lighten-1 mr-2">mdi-arrow-down-bold-circle</v-icon>
-                  My List
-                </span>
-              </div>
+
             </div>
             <!--the video popups-->
             <v-dialog v-model="dialog" persistent height="100px" width="70%">
@@ -140,7 +129,7 @@ $slide: 4;
 
 .text-header {
   position: absolute;
-  bottom: 1%;
+  bottom: 10%;
   z-index: 333;
   color: white;
 
@@ -205,18 +194,7 @@ $slide: 4;
   margin-top: 20px;
   border: 1px solid #4C4C4C;
 }
-.watch-download {
-  padding: 20px 10%
-}
-.watch-download > span{
-  padding: 10px 10px 10px 10px
-}
-.watch-download > span:first-of-type{
-  border-right: 2px solid #4C4C4C;padding: 10px 20px 10px 0
-}
-.watch-download > span > .v-icon{
-  font-size: 35px
-}
+
 .chapter {
   border-left: 2px solid red;
   padding: 5px;
@@ -245,19 +223,46 @@ $slide: 4;
   .details-film span {
     font-size: 16px;
   }
-  .watch-download {
-    padding: 20px 5%
-  }
-  .watch-download > span{
-    padding: 10px 7px 10px 7px
-  }
-  .watch-download > span > .v-icon{
-    font-size: 25px
-  }
+
   .text-header .title-text > span {
     font-size: 20px;
   }
 
+}
+.watch-video{
+  display: flex;
+  align-items: center;
+  background-color: #232323;
+  width:330px;
+  color: white;
+  height: 60px;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 5px;
+}
+.watch-video > span{
+  margin-right: 15px ;
+
+}
+.watch-video > span:first-of-type{
+position: relative;
+  left: -4%;
+}
+
+.watch-video > span:first-of-type > .v-icon{
+  color: red;
+  font-size: 50px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  margin-right: 10px;
+}
+.watch-video > span:last-of-type > .v-icon{
+  color: white;
+  font-size: 35px;
+  background-color: #980000;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 </style>

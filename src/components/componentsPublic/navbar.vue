@@ -7,7 +7,7 @@
       <!--space between div-->
       <v-spacer class="d-flex d-lg-none"></v-spacer>
       <!--the brand-->
-      <v-toolbar-title class="text-uppercase white--text">aflamy</v-toolbar-title>
+      <v-toolbar-title class="text-uppercase white--text"><v-icon class=" white--text mr-2" style="font-size: 26px">mdi-play-network-outline</v-icon>aflamy</v-toolbar-title>
       <!--space between div-->
       <v-spacer class="d-none d-lg-flex"></v-spacer>
       <!--link navbar lg screen-->
@@ -28,7 +28,7 @@
       <!--brand website-->
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="text-uppercase  text-lg-center text-h4 my-4">Aflamy</v-list-item-title>
+          <v-list-item-title class="text-uppercase  text-lg-center text-h5 my-4" style="display: flex; align-items: center"><v-icon class=" white--text mr-2" style="font-size: 25px">mdi-play-network-outline</v-icon>Aflamy</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <!--dividing line -->
