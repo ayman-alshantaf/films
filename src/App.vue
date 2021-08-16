@@ -32,7 +32,7 @@ export default {
     }
   },
   mounted: function(){
-    // setTimeout(this.loadPage() , 5000);
+    setTimeout(this.loadPage() , 500);
   }
 
 };
