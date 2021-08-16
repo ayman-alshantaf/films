@@ -2,7 +2,7 @@
 <template>
   <v-app class="black" id="" style="background-color: black">
     <div class="load-page">
-
+      <div class="loader"></div>
     </div>
     <div id="window">
       <!--    <navbar/>-->
@@ -32,7 +32,7 @@ export default {
     }
   },
   mounted: function(){
-    setTimeout(this.loadPage() , 5000);
+    // setTimeout(this.loadPage() , 5000);
   }
 
 };
@@ -47,6 +47,28 @@ export default {
   height: 100%;
   background-color: #232323;
   z-index:999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid red;
+  width: 90px;
+  height: 90px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 1.5s linear infinite;
 }
 
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 </style>
