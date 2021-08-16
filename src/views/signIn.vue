@@ -54,7 +54,7 @@
             Sing In
           </v-btn>
           <div class="signUp-page">
-            <span class="caption white--text">Don't have an account? <v-btn class="red--text" icon  router  to="/signUp">Sign Up</v-btn> </span>
+            <span class="caption white--text">Don't have an account? <v-btn class="ml-3 caption red--text" icon  router  to="/signUp">SignUp</v-btn> </span>
             <span class="caption white--text">Forgot Password? </span>
           </div>
         </div>
@@ -178,6 +178,7 @@ export default {
   margin-top:15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .btn-sssignIn{
   background-color: transparent !important;
