@@ -45,7 +45,7 @@ export default {
       settings: {
         "dots": false,
         "centerMode": true,
-        "arrows": true,
+        "arrows": false,
         "infinite": true,
         "speed": 1000,
         "slidesToShow": 1,

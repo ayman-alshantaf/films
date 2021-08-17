@@ -6,12 +6,12 @@
       <v-spacer class="black"></v-spacer>
     </v-tabs>
     <div class="container-comments" v-if="showComments">
-      <div class="icon-commit1">"</div>
-      <div class="icon-commit2">"</div>
-      <div class="icon-commit3">"</div>
-      <div class="icon-commit4">"</div>
-      <div class="spacer-comment1"></div>
-      <div class="spacer-comment2"></div>
+      <div class="icon-commit1 d-none d-lg-flex d-md-flex">"</div>
+      <div class="icon-commit2 d-none d-lg-flex d-md-flex">"</div>
+      <div class="icon-commit3 d-none d-lg-flex d-md-flex">"</div>
+      <div class="icon-commit4 d-none d-lg-flex d-md-flex">"</div>
+      <div class="spacer-comment1 d-none d-lg-flex d-md-flex"></div>
+      <div class="spacer-comment2 d-none d-lg-flex d-md-flex"></div>
       <v-row>
         <v-col  v-for="comment in comments" :key="comment.id" cols="12" lg="6" md="6"  class="white--text pr-5 mb-16">
           <div :id="comment.id" class="content-comment">
@@ -187,7 +187,7 @@ export default {
   left: 1%;
   top: 15%;
   font-size: 200px;
-  opacity: 0.3;
+  opacity: 0.2;
   color: white;
   transform: rotate(5deg);
 }
@@ -196,7 +196,7 @@ export default {
   right: 5%;
   top: 25%;
   font-size: 200px;
-  opacity: 0.3;
+  opacity: 0.2;
   color: white;
   transform: rotate(5deg);
 }.icon-commit3{
@@ -204,7 +204,7 @@ export default {
   left: 1%;
   top: 60%;
   font-size: 200px;
-  opacity: 0.3;
+  opacity: 0.2;
   color: white;
   transform: rotate(5deg);
 }
@@ -213,7 +213,7 @@ export default {
   right: 5%;
   top: 70%;
   font-size: 200px;
-  opacity: 0.3;
+  opacity: 0.2;
   color: white;
   transform: rotate(5deg);
 }

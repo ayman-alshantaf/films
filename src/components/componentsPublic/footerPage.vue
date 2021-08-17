@@ -73,7 +73,9 @@ ul {
   list-style: none;
   line-height: 3.5em;
 }
-
+ul li {
+font-size: 15px !important;
+}
 .footer .brand {
   margin-bottom: 20px;
 }
