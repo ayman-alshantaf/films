@@ -6,6 +6,10 @@
       <v-spacer class="black"></v-spacer>
     </v-tabs>
     <div class="container-comments" v-if="showComments">
+      <div class="icon-commit1">"</div>
+      <div class="icon-commit2">"</div>
+      <div class="icon-commit3">"</div>
+      <div class="icon-commit4">"</div>
       <div class="spacer-comment1"></div>
       <div class="spacer-comment2"></div>
       <v-row>
@@ -177,5 +181,40 @@ export default {
   background-color: #232323;
   right: 50%;
   margin: 5px;
+}
+.icon-commit1{
+  position: absolute;
+  left: 1%;
+  top: 15%;
+  font-size: 200px;
+  opacity: 0.3;
+  color: white;
+  transform: rotate(5deg);
+}
+.icon-commit2{
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  font-size: 200px;
+  opacity: 0.3;
+  color: white;
+  transform: rotate(5deg);
+}.icon-commit3{
+  position: absolute;
+  left: 1%;
+  top: 60%;
+  font-size: 200px;
+  opacity: 0.3;
+  color: white;
+  transform: rotate(5deg);
+}
+.icon-commit4{
+  position: absolute;
+  right: 5%;
+  top: 70%;
+  font-size: 200px;
+  opacity: 0.3;
+  color: white;
+  transform: rotate(5deg);
 }
 </style>

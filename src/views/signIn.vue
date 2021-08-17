@@ -58,6 +58,7 @@
           </div>
         </div>
       </v-form>
+
     </div>
     <footer-page class="singUp-footer"/>
   </div>
