@@ -10,7 +10,9 @@
           <v-spacer class="d-flex d-lg-none"></v-spacer>
           <!--the brand-->
           <v-toolbar-title class="text-uppercase white--text">
-            <a href="/" style="text-decoration: none; color: white" router to="/"><v-icon class=" white--text mr-2" style="font-size: 26px">mdi-play-network-outline</v-icon>aflamy</a></v-toolbar-title>
+            <a href="/" style="text-decoration: none; color: white" router to="/">
+              <v-icon class=" white--text mr-2" style="font-size: 26px">mdi-play-network-outline</v-icon>
+              aflamy</a></v-toolbar-title>
           <!--spacing-->
           <!--singUp-->
         </v-app-bar>
@@ -39,19 +41,19 @@
       <!--  End Navbar-->
     </div>
     <div class="singUp">
-      <v-form  class="form-singUp" ref="form" v-model="valid" lazy-validation>
+      <v-form class="form-singUp" ref="form" v-model="valid" lazy-validation>
         <div class="content-form">
-          <h2  class="white--text mb-3">SingIn</h2>
-          <v-text-field class="white--text" v-model="name" :counter="15" :rules="nameRules" label="Email or Phone number" required></v-text-field>
+          <h2 class="white--text mb-3">Sign in</h2>
+          <v-text-field class="white--text" v-model="name" :counter="15" :rules="nameRules"
+                        label="Email or Phone number"   required></v-text-field>
           <v-text-field class="white--text" v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
-          <v-btn block
-              class="red white--text mr-4 mt-3"
-              @click="reset"
-          >
+          <v-btn block :disabled="!valid"  class=" white--text mr-4 mt-3"    @click="validate" style="background-color: #980000" router to="/afterLogin">
             Sing In
           </v-btn>
           <div class="signUp-page">
-            <span class="caption white--text">Don't have an account? <v-btn class="ml-3 caption red--text" icon  router  to="/signUp">SignUp</v-btn> </span>
+            <span class="caption white--text">Don't have an account?
+              <v-btn class="ml-3 caption red--text" icon router to="/signUp">SignUp</v-btn>
+            </span>
             <span class="caption white--text">Forgot Password? </span>
           </div>
         </div>
@@ -67,8 +69,8 @@ import FooterPage from "../components/componentsPublic/footerPage";
 export default {
   name: "signIn",
   components: {FooterPage},
-  data:function (){
-    return{
+  data: function () {
+    return {
       valid: true,
       name: '',
       nameRules: [
@@ -81,11 +83,23 @@ export default {
         v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
       ],
     }
-  }
+  },
+
+  methods: {
+    validate () {
+      this.$refs.form.validate()
+    },
+    reset () {
+      this.$refs.form.reset()
+    },
+    resetValidation () {
+      this.$refs.form.resetValidation()
+    },
+  },
 }
 </script>
 
-<style >
+<style>
 .v-app-bar {
   background-color: rgba(35, 35, 35, 0) !important;
 }
@@ -122,18 +136,20 @@ export default {
 
 .singUp form {
   width: 30%;
-  padding:40px 20px ;
+  padding: 40px 20px;
   position: relative;
 
 }
+
 @media only screen and (max-width: 1130px) {
   .singUp form {
     width: 70%;
-    padding:40px 20px ;
+    padding: 40px 20px;
     position: relative;
 
   }
 }
+
 .singUp form:before {
   content: "";
   position: absolute;
@@ -144,17 +160,21 @@ export default {
   background-color: #000000;
   opacity: .8;
 }
-.singUp form .content-form{
+
+.singUp form .content-form {
   position: relative;
   z-index: 555;
 }
-.singUp form label{
+
+.singUp form label {
   color: #565658 !important;
   font-size: 14px;
   padding: 15px;
 }
-.singUp form .v-text-field input{
+
+.singUp form .v-text-field input {
   background-color: #1B1B1D;
+  border-radius: 5px;
   opacity: 1 !important;
   color: white;
   padding: 30px;
@@ -166,28 +186,32 @@ export default {
   background-color: #000000 !important;
   opacity: .8;
 }
+
 .v-text-field {
   padding-top: 8px !important;
   margin-top: 0px !important;
 }
 
-.signUp-page{
-  margin-top:15px;
+.signUp-page {
+  margin-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.btn-sssignIn{
+
+.btn-sssignIn {
   background-color: transparent !important;
 
 }
-.btn-signIn:active{
+
+.btn-signIn:active {
   background-color: transparent !important;
 }
+
 @media only screen and (max-width: 600px) {
   .singUp form {
     width: 95%;
-    padding:40px 20px ;
+    padding: 40px 20px;
     position: relative;
 
   }

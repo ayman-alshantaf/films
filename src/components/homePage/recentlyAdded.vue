@@ -9,21 +9,32 @@
       <div class="img-slider" v-for="recently in recentlyAdded" :key="recently.id">
         <img :src="recently.image">
         <div class="text-img">
-          <h4 class="white--text">KUNG FU PANDA</h4>
+          <h4 class="white--text ">KUNG FU PANDA</h4>
           <div class="details-film white--text">
-            <span>2h 15min</span>
-            <span>family</span>
-            <span>Adventure</span>
+            <div class="details-film">
+              <div class="text-dots">
+                <span class="dots" style="margin-left: -150px !important;"></span>
+                <span class="subtitle-1 "> 2h 15min </span>
+              </div>
+              <div class="text-dots">
+                <span class="dots">.</span>
+                <span class="subtitle-1"> Family </span>
+              </div>
+              <div class="text-dots">
+                <span class="dots">.</span>
+                <span class="subtitle-1">Adventure </span>
+              </div>
+            </div>
           </div>
           <div class="download-film white--text">
-              <span>
-                <v-icon></v-icon>
+              <small>
+                <v-icon>mdi-arrow-collapse-down</v-icon>
                 Download
-              </span>
-            <span>
-                <v-icon></v-icon>
-                Download
-              </span>
+              </small>
+            <small>
+                <v-icon>mdi-plus</v-icon>
+                Add to List
+              </small>
           </div>
         </div>
       </div>
@@ -142,7 +153,45 @@ export default {
   border-bottom-left-radius: 10px;
 }
 
+.recently-adding .img-slider .text-img h4 {
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.details-film {
+  display: flex;
+  margin-top: -5px !important;
+
+}
+
+.details-film span {
+  margin-right: 5px;
+  font-size: 14px !important;
+  font-weight: 300;
+
+}
+
+span.dots {
+  font-size: 30px !important;
+  color: #980000;
+  font-weight: bolder;
+  padding: 0px;
+}
+
 .recently-adding .img-slider:hover .text-img {
   opacity: 1;
+}
+.download-film >small{
+  font-weight: 200;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.download-film >small > .v-icon{
+  border: 1px solid #980000;
+  color: white;
+  border-radius: 50%;
+  font-size: 13px;
+  width: 22px;
+  height: 22px;
 }
 </style>

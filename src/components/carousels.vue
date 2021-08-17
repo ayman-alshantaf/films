@@ -18,22 +18,33 @@
                   <h2>It</h2> <span class="date-titel">(2017)</span>
                 </div>
                 <div class="details-film">
-                  <span><span class="dots">.</span> 2h 15min </span>
-                  <span><span class="dots">.</span> Family </span>
-                  <span><span class="dots">.</span>Adventure </span>
-                  <span><span class="dots">.</span>Horror </span>
+                  <div class="text-dots">
+                    <span class="dots" style="margin-left: -6px"></span>
+                    <span  class="subtitle-1 " > 2h 15min </span>
+                  </div>
+                  <div class="text-dots">
+                    <span class="dots">.</span>
+                    <span  class="subtitle-1"> Family </span>
+                  </div>
+                  <div class="text-dots">
+                    <span class="dots">.</span>
+                    <span  class="subtitle-1">Adventure </span>
+                  </div>
+                  <div class="text-dots">
+                    <span class="dots">.</span>
+                    <span  class="subtitle-1">Horror </span>
+                  </div>
                 </div>
                 <div class="watch-video">
-                  <span><v-icon>mdi-play-circle</v-icon>watch Now</span>
-                  <span><v-icon>mdi-plus-circle</v-icon>My List</span>
+                  <div class="mr-2" style="display: flex ; ">
+                    <v-icon >mdi-play</v-icon>
+                    <h4 >watch Now  <small class="caption text-center" style="color: #9B9A9B;display: block">2h 15min | 09/05/2017</small>  </h4>
+                  </div>
+                  <span class="subtitle-1"><v-icon>mdi-plus</v-icon>My List</span>
                 </div>
                 <div class="paragraph">
                   <p>In a small town in Maine, seven children known as The Losers Club come face to face with life
                     problems, bullies and a monster that takes the shape of a clown called Pennywise.</p>
-                </div>
-                <div class="rating-header ">
-                  <div class="value-rating ">4.0</div>
-                  <v-rating hover length="5" color="warning" background-color="warning lighten-1" size="25" dense value="3"></v-rating>
                 </div>
                 <div class="chapter">
                   <h3>Chapter 2</h3>
@@ -99,9 +110,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.v-carousel{
+.v-carousel {
   height: 90vh;
 }
+
 $slide: 4;
 @for $n_slide from 1 through $slide {
   .slide-#{$n_slide} {
@@ -129,7 +141,7 @@ $slide: 4;
 
 .text-header {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   z-index: 333;
   color: white;
 
@@ -155,15 +167,16 @@ $slide: 4;
 }
 
 .details-film {
-  margin-top: 10px;
+  display: flex;
 }
 
 .details-film span {
-  margin-right: 3px;
+  margin-right: 13px;
+  font-size: 15px !important;
+  font-weight: 300;
 }
-
-.dots {
-  font-size: 35px;
+span.dots {
+  font-size: 35px !important;
   color: #980000;
   font-weight: bold;
   padding: 0px;
@@ -177,18 +190,21 @@ $slide: 4;
   margin-bottom: 7px;
   width: 40%;
 }
+
 @media only screen and (max-width: 1110px) {
   .text-header .paragraph p {
     margin-bottom: 7px;
     width: 90%;
   }
 }
+
 .text-header .rating-header {
   display: flex;
   align-items: center;
   margin: 0;
 }
-.text-header > hr{
+
+.text-header > hr {
   width: 98%;
   margin: auto;
   margin-top: 20px;
@@ -196,21 +212,23 @@ $slide: 4;
 }
 
 .chapter {
-  border-left: 2px solid red;
-  padding: 5px;
+  border-left: 2px solid #980000;
+  padding:12px 0px 0px 6px;
 }
 
 .subContainer-text {
   padding: 0 10%;
 }
-.icon-video{
+
+.icon-video {
   z-index: 999;
   position: absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size: 90px!important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px !important;
 }
+
 @media only screen and (max-width: 500px) {
   .text-header .paragraph p {
     margin-bottom: 7px;
@@ -229,40 +247,57 @@ $slide: 4;
   }
 
 }
-.watch-video{
+
+.watch-video {
   display: flex;
   align-items: center;
-  background-color: #232323;
-  width:330px;
+  background-color: #3E3E40;
+  width: 320px;
   color: white;
-  height: 60px;
+  height: 55px;
   border-radius: 30px;
   position: relative;
-  margin-top: 5px;
 }
-.watch-video > span{
-  margin-right: 15px ;
+
+.watch-video > span {
+  margin-right: 10px;
 
 }
-.watch-video > span:first-of-type{
-position: relative;
+
+.watch-video > div {
+  display: flex;
+  align-items: center;
+  position: relative;
   left: -4%;
 }
-
-.watch-video > span:first-of-type > .v-icon{
-  color: red;
-  font-size: 50px;
-  background-color: white;
-  border-radius: 50%;
-  border: none;
-  margin-right: 10px;
+.watch-video > div > h3 > small{
+  display: block;
 }
-.watch-video > span:last-of-type > .v-icon{
+.watch-video >  div  .v-icon {
   color: white;
-  font-size: 35px;
   background-color: #980000;
   border-radius: 50%;
+  font-size: 35px;
+  border: none;
   margin-right: 10px;
+  width: 55px;
+  height: 55px;
+}
+
+.watch-video > span:last-of-type > .v-icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 20px;
+  background-color: #2D2626;
+  border-radius: 50%;
+  margin-right: 7px;
+  border: 1px solid red !important;
+
+}
+.watch-video > span:last-of-type {
+  font-size: 13px !important;
+  font-weight: 300;
 }
 
 </style>

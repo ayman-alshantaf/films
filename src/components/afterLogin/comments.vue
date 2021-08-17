@@ -6,9 +6,11 @@
       <v-spacer class="black"></v-spacer>
     </v-tabs>
     <div class="container-comments" v-if="showComments">
+      <div class="spacer-comment1"></div>
+      <div class="spacer-comment2"></div>
       <v-row>
-        <v-col v-for="comment in comments" :key="comment.id" cols="12" lg="6" md="6" class="white--text pr-5">
-          <div class="content-comment">
+        <v-col  v-for="comment in comments" :key="comment.id" cols="12" lg="6" md="6"  class="white--text pr-5 mb-16">
+          <div :id="comment.id" class="content-comment">
             <div class="image">
               <img :src="comment.image">
             </div>
@@ -138,6 +140,7 @@ export default {
   margin-top: 20px;
   color: #EEEEEE;
 }
+
 @media only screen and (max-width: 500px) {
 
   .comments .content-comment .image img {
@@ -145,11 +148,34 @@ export default {
     height: 60px;
     border-radius: 50%;
   }
+
   .container-comments {
     padding: 100px 0% 20px 0%;
   }
+
   .comments .content-comment .text .comment p {
     font-size: 14px !important;
   }
+}
+.content-comment{
+  position: relative;
+}
+.spacer-comment1{
+  position: absolute;
+  height: 43%;
+  width: 1px;
+  top: 23px;
+  background-color: #232323;
+  right: 50%;
+  margin: 5px;
+}
+.spacer-comment2{
+  position: absolute;
+  height: 43%;
+  width: 1px;
+  top: 50%;
+  background-color: #232323;
+  right: 50%;
+  margin: 5px;
 }
 </style>

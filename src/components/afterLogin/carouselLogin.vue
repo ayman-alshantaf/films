@@ -17,10 +17,22 @@
                   <h2>It</h2> <span class="date-titel">(2017)</span>
                 </div>
                 <div class="details-film">
-                  <span><span class="dots">.</span> 2h 15min </span>
-                  <span><span class="dots">.</span> Family </span>
-                  <span><span class="dots">.</span>Adventure </span>
-                  <span><span class="dots">.</span>Horror </span>
+                  <div class="text-dots">
+                    <span class="dots" style="margin-left: -6px"></span>
+                    <span  class="subtitle-1 " > 2h 15min </span>
+                  </div>
+                  <div class="text-dots">
+                    <span class="dots">.</span>
+                    <span  class="subtitle-1"> Family </span>
+                  </div>
+                  <div class="text-dots">
+                    <span class="dots">.</span>
+                    <span  class="subtitle-1">Adventure </span>
+                  </div>
+                  <div class="text-dots">
+                    <span class="dots">.</span>
+                    <span  class="subtitle-1">Horror </span>
+                  </div>
                 </div>
                 <div class="paragraph">
                   <p>In a small town in Maine, seven children known as The Losers Club come face to
@@ -29,9 +41,9 @@
                     Pennywise.</p>
                 </div>
                 <div class="rating-header ">
-                  <div class="value-rating ">4.0</div>
+                  <div class="value-rating text-h5 mr-2">4.0</div>
                   <v-rating hover length="5" color="warning" background-color="warning lighten-1"
-                            size="25" dense
+                            size="18" dense
                             value="3"></v-rating>
                 </div>
                 <div class="chapter">
@@ -42,16 +54,16 @@
               <hr>
               <!--icon watch and download-->
               <div class="watch-download">
-                <span class="caption" style="">
-                  <v-icon class="red--text mr-2">mdi-play-circle</v-icon>
+                <span class="subtitle-1" style="">
+                  <v-icon class="mr-2" style=" font-size:19px;width: 40px;height:40px;color: white;background-color: #980000;border-radius: 50%">mdi-play</v-icon>
                   Watch now
                 </span>
                 <span class="caption">
-                  <v-icon class="grey--text lighten-1 mr-2">mdi-plus-circle</v-icon>
+                  <v-icon class=" mr-2" >mdi-plus</v-icon>
                   My List
                 </span>
                 <span class="caption">
-                  <v-icon class="grey--text lighten-1 mr-2">mdi-arrow-down-bold-circle</v-icon>
+                  <v-icon class="  mr-2" >mdi-arrow-down-bold</v-icon>
                   My List
                 </span>
               </div>
@@ -116,9 +128,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.v-carousel{
+.v-carousel {
   height: 90vh;
 }
+
 $slide: 4;
 @for $n_slide from 1 through $slide {
   .slide-#{$n_slide} {
@@ -172,73 +185,87 @@ $slide: 4;
 }
 
 .details-film {
-  margin-top: 10px;
+  display: flex;
 }
 
 .details-film span {
-  margin-right: 3px;
+  margin-right: 13px;
+  font-size: 15px !important;
+  font-weight: 300;
 }
-
-.dots {
-  font-size: 35px;
+span.dots {
+  font-size: 35px !important;
   color: #980000;
   font-weight: bold;
   padding: 0px;
 }
 
+
 .text-header .paragraph {
-  margin-top: 25px;
+  margin-top: 8px;
 }
 
 .text-header .paragraph p {
   margin-bottom: 7px;
   width: 40%;
 }
+
 @media only screen and (max-width: 1110px) {
   .text-header .paragraph p {
     margin-bottom: 7px;
     width: 90%;
   }
 }
+
 .text-header .rating-header {
   display: flex;
   align-items: center;
   margin: 0;
 }
-.text-header > hr{
+
+.text-header > hr {
   width: 98%;
   margin: auto;
   margin-top: 20px;
   border: 1px solid #4C4C4C;
 }
+
 .watch-download {
   padding: 20px 10%
 }
-.watch-download > span{
+
+.watch-download > span {
   padding: 10px 10px 10px 10px
 }
-.watch-download > span:first-of-type{
-  border-right: 2px solid #4C4C4C;padding: 10px 20px 10px 0
+
+.watch-download > span:first-of-type {
+  border-right: 2px solid #4C4C4C;
+  padding: 10px 20px 10px 0;
+
 }
-.watch-download > span > .v-icon{
-  font-size: 35px
+
+.watch-download > span > .v-icon {
+  color: white;font-size:17px;width:30px;height: 30px;background-color: #232323;border: 1px solid #980000;border-radius: 50%
 }
+
 .chapter {
-  border-left: 2px solid red;
-  padding: 5px;
+  border-left: 2px solid #980000;
+  padding:15px 0px 0px 9px;
 }
 
 .subContainer-text {
   padding: 0 10%;
 }
-.icon-video{
+
+.icon-video {
   z-index: 999;
   position: absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size: 90px!important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px !important;
 }
+
 @media only screen and (max-width: 500px) {
   .text-header .paragraph p {
     margin-bottom: 7px;
@@ -254,10 +281,10 @@ $slide: 4;
   .watch-download {
     padding: 20px 5%
   }
-  .watch-download > span{
+  .watch-download > span {
     padding: 10px 7px 10px 7px
   }
-  .watch-download > span > .v-icon{
+  .watch-download > span > .v-icon {
     font-size: 25px
   }
   .text-header .title-text > span {

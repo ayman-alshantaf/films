@@ -12,6 +12,10 @@
           </div>
         </div>
         <img :src="topMovie.image">
+        <div class="title-films">
+          <h1>{{topMovie.title}}</h1>
+          <h2>{{topMovie.subTitle}}</h2>
+        </div>
       </div>
     </VueSlickCarousel>
   </div>
@@ -29,14 +33,14 @@ export default {
   data: function () {
     return {
       topMovies: [
-        {"id": 1, "image": "image/topMovies/topmovies_1.jpg"},
-        {"id": 2, "image": "image/topMovies/adventure_2.jpg"},
-        {"id": 3, "image": "image/topMovies/adventure_3.jpg"},
-        {"id": 4, "image": "image/topMovies/adventure_4.jpg"},
-        {"id": 5, "image": "image/topMovies/adventure_5.jpg"},
-        {"id": 6, "image": "image/topMovies/adventure_6.jpg"},
-        {"id": 7, "image": "image/topMovies/adventure_7.jpg"},
-        {"id": 8, "image": "image/topMovies/adventure_8.jpg"},
+        {"id": 1,title:"Aladdin",subTitle:"Chapter 1 – Parabellum" ,"image": "image/topMovies/topmovies_1.jpg"},
+        {"id": 2,title:" Angry Men 12",subTitle:"Chapter 1 – Parabellum" , "image": "image/topMovies/adventure_2.jpg"},
+        {"id": 3,title:" Fight Club",subTitle:"Chapter 1 – Parabellum" , "image": "image/topMovies/adventure_3.jpg"},
+        {"id": 4, title:" Lion",subTitle:"Chapter 1 – Parabellum" ,"image": "image/topMovies/adventure_4.jpg"},
+        {"id": 5,title:"Ruby Sparks",subTitle:"Chapter 1 – Parabellum" , "image": "image/topMovies/adventure_5.jpg"},
+        {"id": 6,title:"the kid 1921",subTitle:"Chapter 1 – Parabellum" , "image": "image/topMovies/adventure_6.jpg"},
+        {"id": 7,title:" The Lobster",subTitle:"Chapter 1 – Parabellum" , "image": "image/topMovies/adventure_7.jpg"},
+        {"id": 8,title:" Hachi: A Dog’s Tale",subTitle:"Chapter 1 – Parabellum" , "image": "image/topMovies/adventure_8.jpg"},
       ],
       settings: {
         "dots": false,
@@ -79,7 +83,6 @@ export default {
           }
         ]
       },
-
     }
   }
 
@@ -139,5 +142,14 @@ export default {
   color: white;
   text-align: center;
 }
-
+.title-films{
+  position: absolute;
+  left: 10%;
+  bottom: 15%;
+  z-index: 222;
+  color: white;
+}
+.title-films h1{
+  font-size: 45px;
+}
 </style>

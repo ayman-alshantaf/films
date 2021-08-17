@@ -11,7 +11,7 @@
               <li>About us</li>
             </ul>
           </v-col>
-          <v-col lg="3" md="6" sm="6" class="white--text">
+          <v-col lg="2" md="6" sm="6" class="white--text">
             <ul>
               <li>Live</li>
               <li>FAQ</li>
@@ -26,6 +26,8 @@
               <li>250 IMDB</li>
               <li>Advertise with us</li>
             </ul>
+          </v-col>
+          <v-col lg="1" md="6" sm="6" class="white--text">
           </v-col>
           <v-col lg="3" md="6" sm="6" class="white--text">
             <h3 class="brand">AFLAMY</h3>
@@ -63,13 +65,13 @@ export default {
 }
 
 .footer .content-footer {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
 ul {
   list-style: none;
-  line-height: 3em;
+  line-height: 3.5em;
 }
 
 .footer .brand {
@@ -78,7 +80,7 @@ ul {
 
 .footer .social-media {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 30px;
 }
 
@@ -99,7 +101,7 @@ ul {
 .footer .all-rights {
   margin: auto;
   margin-top: 50px;
-  width: 80%;
+  width: 90%;
   text-align: center;
 }
 
@@ -108,15 +110,18 @@ ul {
   margin-top: 30px;
   margin-bottom: 15px;
 }
+
 @media only screen and (max-width: 500px) {
   .footer .content-footer {
     width: 93%;
     margin: auto;
   }
+
   ul {
     list-style: none;
     line-height: 2.3em;
   }
+
   .footer .all-rights {
     margin: auto;
     margin-top: 50px;
