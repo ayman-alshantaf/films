@@ -45,9 +45,9 @@
         <div class="content-form">
           <h2 class="white--text mb-3">Sign in</h2>
           <v-text-field class="white--text" v-model="name" :counter="15" :rules="nameRules"
-                        label="Email or Phone number"   required></v-text-field>
-          <v-text-field class="white--text" v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
-          <v-btn block :disabled="!valid"  class=" white--text mr-4 mt-3"    @click="validate" style="background-color: #980000" router to="/afterLogin">
+                        label="Email or Phone number"   required="required"></v-text-field>
+          <v-text-field class="white--text" v-model="email" :rules="emailRules" label="E-mail" required="required"></v-text-field>
+          <v-btn block  class=" white--text mr-4 mt-3" @click="valid" style="background-color: #980000" router to="/afterLogin">
             Sing In
           </v-btn>
           <div class="signUp-page">
@@ -58,7 +58,6 @@
           </div>
         </div>
       </v-form>
-
     </div>
     <footer-page class="singUp-footer"/>
   </div>
@@ -84,19 +83,7 @@ export default {
         v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
       ],
     }
-  },
-
-  methods: {
-    validate () {
-      this.$refs.form.validate()
-    },
-    reset () {
-      this.$refs.form.reset()
-    },
-    resetValidation () {
-      this.$refs.form.resetValidation()
-    },
-  },
+  }
 }
 </script>
 

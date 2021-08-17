@@ -44,12 +44,12 @@
       <v-form class="form-singUp" ref="form" v-model="valid" lazy-validation>
         <div class="content-form">
           <h2 class="white--text mb-3">Sign up</h2>
-          <v-text-field class="white--text" v-model="name" :counter="15" :rules="nameRules" label="Email"
+          <v-text-field class="white--text" v-model="name" :counter="15" :rules="nameRules" label="Name"
                         required></v-text-field>
-          <v-text-field class="white--text" v-model="email" :rules="emailRules" label="Name" required></v-text-field>
+          <v-text-field class="white--text" v-model="email" :rules="emailRules" label="Email" required></v-text-field>
           <v-text-field class="white--text" v-model="number" :rules="numberRules" label="Phone number"
                         required></v-text-field>
-          <v-text-field class="white--text" v-model="email" :rules="passwordRules" label="Password"
+          <v-text-field class="white--text" v-model="password" :rules="passwordRules" label="Password"
                         required></v-text-field>
           <v-btn block
                  class=" white--text mr-4 mt-3"
