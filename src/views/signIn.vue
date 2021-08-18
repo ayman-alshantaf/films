@@ -44,9 +44,9 @@
       <v-form class="form-singUp" ref="form" v-model="valid" lazy-validation>
         <div class="content-form">
           <h2 class="white--text mb-3">Sign in</h2>
-          <v-text-field class="white--text" v-model="name" :counter="15" :rules="nameRules"
+          <v-text-field class="white--text" v-model="email" :counter="15" :rules="emailRules"
                         label="Email or Phone number"   required="required"></v-text-field>
-          <v-text-field class="white--text" v-model="email" :rules="emailRules" label="E-mail" required="required"></v-text-field>
+          <v-text-field class="white--text" v-model="password" :rules="PasswordRules" label="Password" required="required"></v-text-field>
           <v-btn block  class=" white--text mr-4 mt-3" @click="valid" style="background-color: #980000" router to="/afterLogin">
             Sing In
           </v-btn>
@@ -72,10 +72,10 @@ export default {
   data: function () {
     return {
       valid: true,
-      name: '',
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+      password: '',
+      PasswordRules: [
+        v => !!v || 'Password is required',
+        v => (v && v.length <= 20) || 'Password must be less than 10 characters',
       ],
       email: '',
       emailRules: [
